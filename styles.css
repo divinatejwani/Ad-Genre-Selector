@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #060e2a;
+    min-height: 100vh;
+}
+
+.ad-experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #060e2a;
+}
+
+.ad-experience-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.ad-experience-subtitle {
+    color: #cfd8ff;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.genre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+}
+
+.genre-btn {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #cfd8ff;
+    border-radius: 24px;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    margin: 0.3rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.genre-btn:hover, .genre-btn:focus {
+    background: #1a237e;
+    color: #cfd8ff;
+    outline: none;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 700px;
+}
+
+.go-ads-free {
+    background: #2563ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.go-ads-free:hover, .go-ads-free:focus {
+    background: #1741a6;
+    outline: none;
+}
+
+.skip-btn {
+    background: #fff;
+    color: #060e2a;
+    border: 2px solid #cfd8ff;
+    border-radius: 8px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.skip-btn:hover, .skip-btn:focus {
+    background: #cfd8ff;
+    color: #060e2a;
+    outline: none;
+}
