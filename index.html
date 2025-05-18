@@ -10,43 +10,60 @@
     <!-- Favicon -->
     <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Navigation content will go here -->
-        </nav>
-    </header>
-
-    <main class="ad-experience-container">
-        <h1 class="ad-experience-title">Choose Your Ad Experience</h1>
-        <p class="ad-experience-subtitle">Pick one or more genres that interest you.<br>Not sure? You can always change this later.</p>
-        <div class="genre-buttons">
-            <button class="genre-btn">Drama</button>
-            <button class="genre-btn">Comedy</button>
-            <button class="genre-btn">Romance</button>
-            <button class="genre-btn">Thriller</button>
-            <button class="genre-btn">Sci-Fi & Fantasy</button>
-            <button class="genre-btn">Action & Adventure</button>
-            <button class="genre-btn">Horror</button>
-            <button class="genre-btn">Reality Shows</button>
-            <button class="genre-btn">Animated</button>
-            <button class="genre-btn">Wildlife & Nature</button>
-            <button class="genre-btn">Sports</button>
-            <button class="genre-btn">Documentaries</button>
-            <button class="genre-btn">Crime & Mystery</button>
-            <button class="genre-btn">Game Shows</button>
+    <div class="main-bg">
+        <div class="ad-experience-container">
+            <h1 class="ad-experience-title">Choose Your Ad Experience</h1>
+            <p class="ad-experience-subtitle">Pick one or more genres that interest you.</p>
+            <p class="ad-experience-subtitle">Not sure? You can always change this later.</p>
+            <div class="genre-buttons">
+                <div class="genre-row">
+                    <button class="genre-btn">Drama <span class="checkmark" /></button>
+                    <button class="genre-btn">Comedy <span class="checkmark" /></button>
+                    <button class="genre-btn">Romance <span class="checkmark" /></button>
+                    <button class="genre-btn">Thriller <span class="checkmark" /></button>
+                    <button class="genre-btn">Sci-Fi & Fantasy <span class="checkmark" /></button>
+                </div>
+                <div class="genre-row">
+                    <button class="genre-btn">Action & Adventure <span class="checkmark" /></button>
+                    <button class="genre-btn">Horror <span class="checkmark" /></button>
+                    <button class="genre-btn">Reality Shows <span class="checkmark" /></button>
+                    <button class="genre-btn">Animated <span class="checkmark" /></button>
+                </div>
+                <div class="genre-row">
+                    <button class="genre-btn">Wildlife & Nature <span class="checkmark" /></button>
+                    <button class="genre-btn">Sports <span class="checkmark" /></button>
+                    <button class="genre-btn">Documentaries <span class="checkmark" /></button>
+                </div>
+                <div class="genre-row">
+                    <button class="genre-btn">Crime & Mystery <span class="checkmark" /></button>
+                    <button class="genre-btn">Game Shows <span class="checkmark" /></button>
+                </div>
+            </div>
         </div>
-        <div class="action-buttons">
-            <button class="go-ads-free">Go Ads Free</button>
-            <button class="skip-btn">Skip</button>
+        <div class="confirmation-container">
+            <h1 class="ad-experience-title">Got it!</h1>
+            <p class="ad-experience-subtitle">
+                Your Ad preferences are set. We will show you more of what you enjoy:
+                <span class="selected-genres"></span>
+            </p>
         </div>
-    </main>
-
-    <footer>
-        <!-- Footer content will go here -->
-    </footer>
+        <div class="ad-container">
+            <video src="/masterchef-intro.mp4" autoplay></video>
+        </div>
+        <div class="actions-row">
+            <div class="confirmation-timer">
+                <span class="timer-text">Resuming your show in <span class="timer"><span class="timer-value">5</span> seconds</span></span>
+            </div>
+            <div class="action-buttons">
+                <button class="go-ads-free">Go Ads Free</button>
+                <button class="skip-btn">Skip</button>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="script.js"></script>

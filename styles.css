@@ -1,99 +1,278 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #060e2a;
-    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: #010728;
+    height: 100vh;
 }
 
-.ad-experience-container {
+.main-bg {
+    height: calc(100vh - 80px);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #060e2a;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px 0;
 }
 
 .ad-experience-title {
     color: #fff;
-    font-size: 2rem;
+    font-size: 34px;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 35px;
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .ad-experience-subtitle {
-    color: #cfd8ff;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    color: #fff;
+    font-size: 20px;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 300;
 }
 
 .genre-buttons {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.genre-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
     justify-content: center;
-    margin-bottom: 2.5rem;
-    max-width: 700px;
 }
 
 .genre-btn {
     background: transparent;
-    color: #fff;
-    border: 2px solid #cfd8ff;
-    border-radius: 24px;
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
-    margin: 0.3rem;
+    color: #e1e6f0;
+    border: 1px solid #e1e6f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-}
-.genre-btn:hover, .genre-btn:focus {
-    background: #1a237e;
-    color: #cfd8ff;
+    transition: all 0.2s ease-in;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.genre-btn:focus-visible,
+.genre-btn:hover {
+    background: #fff;
+    color: #000000;
+}
+
+.genre-btn.selected {
+    background: #fff;
+    color: #000000;
+}
+
+.genre-btn .checkmark {
+    width: 0;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.2s ease-in, margin-left 0.2s ease-in;
+}
+
+.genre-btn.selected .checkmark {
+    width: 20px;
+    margin-left: 10px;
 }
 
 .action-buttons {
+    align-self: flex-end;
     display: flex;
     gap: 1rem;
+}
+
+.actions-row {
+    width: 95%;
+    display: flex;
     justify-content: flex-end;
-    width: 100%;
-    max-width: 700px;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .go-ads-free {
-    background: #2563ff;
+    background: #095ae5;
     color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.7rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
+    border: 1px solid #0040ff;
+    border-radius: 12px;
+    padding: 18px 34px;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.2s;
-}
-.go-ads-free:hover, .go-ads-free:focus {
-    background: #1741a6;
-    outline: none;
+    transition: all 0.2s ease-in;
+    font-family: "Roboto", sans-serif;
 }
 
 .skip-btn {
-    background: #fff;
-    color: #060e2a;
-    border: 2px solid #cfd8ff;
-    border-radius: 8px;
-    padding: 0.7rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
+    background: #fafafa;
+    color: #1e1e1e;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 18px 46px;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s;
+    font-family: "Roboto", sans-serif;
+    transition: all 0.2s ease-in;
 }
-.skip-btn:hover, .skip-btn:focus {
-    background: #cfd8ff;
-    color: #060e2a;
-    outline: none;
+
+.skip-btn:hover {
+    background: #f0f0f0;
+    border-color: #eeeeee;
+}
+
+.skip-btn:focus {
+    background: #ababab;
+    border-color: #ababab;
+}
+
+.skip-btn.inactive,
+.skip-btn:disabled {
+    background: #d4d4d4 !important;
+    color: #808080 !important;
+    cursor: not-allowed !important;
+    pointer-events: none;
+}
+
+
+.selected-genres {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    max-width: 75%;
+    margin: 20px auto 0;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 900px) {
+    .ad-experience-container {
+        width: 90%;
+    }
+
+    .ad-experience-title {
+        font-size: 24px;
+    }
+
+    .ad-experience-subtitle {
+        max-width: 95%;
+        font-size: 16px;
+    }
+
+    .genre-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+        width: 95%;
+        margin: 40px auto 0;
+    }
+
+    .genre-row {
+        display: contents;
+    }
+    
+    .genre-btn {
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 12px 0;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .go-ads-free {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .skip-btn {
+        padding: 12px 36px;
+        font-size: 14px;
+    }
+
+    .ad-container video {
+        height: auto !important;
+    }
+    
+    .actions-row {
+        width: 90%;
+    }
+
+    .action-buttons {
+        right: 16px;
+        bottom: 16px;
+    }
+    
+    .confirmation-timer {
+        font-size: 14px !important;
+    }
+}
+
+.confirmation-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.confirmation-actions-row {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.confirmation-timer {
+    display: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.continue-watching-btn {
+    background: #fafafa;
+    color: #1e1e1e;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 18px 46px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    transition: all 0.2s ease-in;
+}
+
+.timer-text .timer {
+    opacity: 0.5;
+}
+
+.ad-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ad-container video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
